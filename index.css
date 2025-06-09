@@ -1,0 +1,506 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* container/home */
+.main
+{
+    width:100%;
+    height:420vh;
+    background-color: #f0f2f5;
+}
+/* navbar */
+.changenav
+{
+    height:70px;
+    margin-bottom: 0px!important;
+   position: fixed;
+   z-index: 1;
+   top: 20px;
+    background-color:transparent!important;
+}
+/* subnav */
+.changecontent1 {
+  padding: 10px 20px!important;
+  color:black;  
+      font-size: 20px!important;
+    background: linear-gradient(to bottom, purple, whitesmoke)!important; /* shiny white gradient */
+text-decoration: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.8)!important; 
+  border: 1px solid #ccc !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+/* subnav hover  */
+.changecontent1:hover {
+  transform: translateY(-2px)!important;
+  color: white!important;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2), inset 0 2px 2px rgba(255,255,255,0.9)!important;
+} 
+
+/* home image */
+.changeimg
+{
+    width: 100%!important;
+    height: 720px!important;
+    
+}
+/* content box inside image */
+.content 
+{
+    position: relative;
+    color: blueviolet;
+   /* background-color: pink; */
+   width:100%;
+}
+/* content box inside image */
+.content h1
+{
+    
+    position: absolute;
+    top: -420px;
+    left: 500px;
+    animation: slideFadeDown 1.5s ease-out forwards;
+    animation-iteration-count: 3;
+    animation-duration: 3s;
+}
+h1
+{
+    text-align: center;
+}
+@keyframes slideFadeDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*  about */
+.about
+{
+    width:100%;
+    min-height:100vh;
+    background-color: #f0f2f5;
+} 
+
+  .aboutt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding-top: 5%;
+}
+
+.about1 {
+    width: 40%;
+    min-height: 500px;
+    animation: slideInLeft 1.5s ease-out forwards;
+     animation-duration: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.about2 {
+    width: 40%;
+    min-height: 500px;
+    background-image: url("./about2.jpg");
+    padding: 20px;
+    padding-left: 30px;
+    background-size: cover;
+    color: whitesmoke;
+    animation: slideInRight 1.5s ease-out forwards;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.aboutad {
+    width: 100%;
+    height: 50vh;
+    /* background-color: blue; */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+  
+/* coleection */
+
+ .collection {
+    width: 100%;
+    height: 80vh;
+    background-color: #f0f2f5;
+}
+
+.collectionimg {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+.col1,.col2, .col3 {
+    opacity: 0;
+    transform: translateY(40px); 
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.col1 {
+    width: 20%;
+    height: 20vh;
+    /* background-color: red; */
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+.col2 {
+    width: 40%;
+    height: 20vh;
+    animation-delay: 0.6s;
+     animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+.col3 {
+    width: 20%;
+    height: 20vh;
+    /* background-color: red; */
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* description */
+.description
+{
+    width:100%;
+    height:100vh;
+background-image: url("https://png.pngtree.com/background/20210716/original/pngtree-purple-dream-blurred-flowers-background-picture-image_1368556.jpg");
+overflow-x: hidden;
+overflow-y: hidden;
+font-size: 20px;
+object-fit: cover;
+}
+
+.process-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.process-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color:black;
+}
+
+.process-step {
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateX(0);
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.slide-in-left {
+  animation-name: slideInFromLeft;
+}
+
+.slide-in-right {
+  animation-name: slideInFromRight;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* items */
+.items
+{
+    width:100%;
+    height:100vh;
+    background-color: #f0f2f5;
+}
+ .gridmain
+  {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    height:80vh;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 12px;
+  }
+
+
+   .image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(255, 255, 255, 0.8); */
+    background: linear-gradient(to bottom, purple, whitesmoke) !important;
+  color: black;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.image-box:hover .overlay {
+  transform: translateY(0);
+}
+
+/* login page */
+
+.order {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, purple, whitesmoke) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ord1, .ord2 {
+    animation: rotateIn 1s ease-out forwards;
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.ord1 {
+    width: 40%;
+    height: 60vh;
+    background-color: pink;
+    animation-delay: 0.2s;
+        animation-duration: 5s;
+        opacity: 0;
+    animation-iteration-count: 2;
+}
+
+.ord2 {
+    width: 40%;
+    height: 60vh;
+    background-color: purple;
+    padding: 2%;
+    animation-delay: 0.4s;
+    animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+}
+.ord2:hover{
+    /* animation-play-state: paused; */
+        transform: rotate(0deg);
+
+
+}
+/* Center text */
+.ord2 h3,
+.ord2 p {
+    text-align: center;
+}
+
+.labemail,
+.labpass {
+    color: white !important;
+}
+
+.ema,
+.pass {
+    width: 80% !important;
+    height: 50px;
+    border: 2px solid blueviolet !important;
+}
+
+.button {
+    width: 80% !important;
+    height: 50px !important;
+    background-color: white !important;
+    color: purple !important;
+}
+
+/* Rotate animation keyframes */
+@keyframes rotateIn {
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+
+/* contact page */
+.footer
+{
+    width:100%;
+    min-height:40vh;
+    background-color:black;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.information
+{
+    width:30%;
+    min-height:30vh;
+    background-color:transparent;
+    color:white;
+    padding: 20px;
+}
+
+.follow
+{
+    width:30%;
+   min-height:30vh;
+    background-color:transparent;
+    color:white;
+    padding: 20px;
+}
+.icon2
+{
+    width:100%;
+    height:50px;
+    background-color: transparent;
+    font-size: 20px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items:center;  
+    gap:10%;
+    font-size: 200%;
+}
+.hours
+{
+    width:30%;
+   min-height:30vh;
+    background-color:transparent;
+    padding: 20px;
+    text-align: center;
+    color:white;
+}
+
+
+@media only screen and (min-width:300px) and (max-width:600px)
+{
+
+.main
+{
+    width:208%;
+}
+.about1 {
+    width: 40%;
+    min-height: 593px;
+}
+.footer
+{
+    flex-direction:column;
+}
+.content h1 
+{
+    display: none!important;
+}
+}
+
+
+
+@media only screen and (min-width:601px)and (max-width:900px)
+{
+    .main{ 
+        width:108%;
+    }
+    .content h1 
+{
+    display: none!important;
+}
+    
+}
+
+
